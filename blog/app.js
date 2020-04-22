@@ -5,6 +5,10 @@ const app = express();
 //
 const path = require("path");
 
+require("./model/connect")
+
+require("./model/user");
+
 //引入home,admin路由
 const home = require("./route/home");
 const admin =require("./route/admin")
@@ -19,7 +23,7 @@ app.set("view engine","art");
 //静态资源
 app.use(express.static(path.join(__dirname,"public")));
 
-app.use("/",home);
+//app.use("/",home);
 app.use("/home",home);
 app.use("/admin",admin);
 

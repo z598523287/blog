@@ -4,7 +4,7 @@ const express = require("express");
 const home = express.Router();
 
 home.get("/", (req,res)=> {
-    res.send("欢迎来到首页");
+    res.render("home/default");
 })
 //将路由作为模块导出
 module.exports = home;

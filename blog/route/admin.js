@@ -4,7 +4,15 @@ const express = require("express");
 const admin = express.Router();
 
 admin.get("/login", (req,res)=> {
-    res.render("");
-})
+    res.render("admin/login");
+});
+
+admin.get("/user",(req,res)=>{
+    res.render("admin/user");
+});
+
+admin.get("/user-edit",(req,res)=>{
+    res.render("admin/user-edit");
+});
 //将路由作为模块导出
 module.exports = admin;
